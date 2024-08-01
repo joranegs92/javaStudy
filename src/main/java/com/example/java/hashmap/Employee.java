@@ -29,6 +29,10 @@ public class Employee {
 		return nm == e.nm && Objects.equals(Id,e.Id);
 
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(Id, nm);
+	}
 
 
 }
