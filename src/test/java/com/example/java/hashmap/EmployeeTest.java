@@ -19,6 +19,8 @@ public class EmployeeTest {
 		e2.setNm("na");
 
 		System.out.println(e1.equals(e2));  // false
+		System.out.println(e1.hashCode());
+		System.out.println(e2.hashCode());
 
 
 

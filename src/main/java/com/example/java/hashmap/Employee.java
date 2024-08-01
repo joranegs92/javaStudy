@@ -3,19 +3,16 @@ package com.example.java.hashmap;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 public class Employee {
 	private Integer Id;
 	private String nm;
 
-	@Override
-	public int hashCode() {
-		final int PRIME = 31;
-		int result = 1;
-		result = PRIME * result + getId();
-		return result;
-	}
+
+
 	@Override
 	public boolean equals(Object o) {
 		if (o == null) {
@@ -29,7 +26,9 @@ public class Employee {
 		}
 
 		Employee e = (Employee) o;
-		return (this.getId() == e.getId());
+		return nm == e.nm && Objects.equals(Id,e.Id);
 
 	}
+
+
 }
