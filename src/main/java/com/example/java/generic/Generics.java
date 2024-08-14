@@ -7,5 +7,10 @@ public class Generics {
 	public static void main(String[] args) {
 		new Generics().printT("hello");
 		new Generics().printT(1);
+		printS("printS");
+		printS(2);
+	}
+	static <S> void printS(S s){
+		System.out.println(s.toString());
 	}
 }
